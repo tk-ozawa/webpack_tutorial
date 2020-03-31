@@ -16,7 +16,10 @@ module.exports = {
 		rules: [
 			{
 				test: /\.css$/,	// cssファイルをjsModuleにbundleする
-				use: ['css-loader']
+				use: [	// loader は下から読み込まれる。順番に注意
+					'style-loader',
+					'css-loader'
+				]
 			}
 		]
 	},
