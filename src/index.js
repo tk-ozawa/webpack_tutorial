@@ -15,3 +15,4 @@ function component() {
 }
 
 document.body.appendChild(component())
+document.body.classList.add('background')
