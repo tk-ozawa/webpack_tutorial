@@ -3,7 +3,7 @@ import Animal from './utilities'
 
 console.log(Animal.say())
 
-import style from './css/style.css'
+import './css/style.css'
 
 console.log(style.toString())
 
