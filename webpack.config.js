@@ -13,7 +13,7 @@ module.exports = {
 	},
 
 	module: {
-		rule: [
+		rules: [
 			{
 				test: /\.css$/,	// cssファイルをjsModuleにbundleする
 				use: ['css-loader']
