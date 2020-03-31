@@ -12,6 +12,15 @@ module.exports = {
 		path: outputPath
 	},
 
+	module: {
+		rule: [
+			{
+				test: /\.css$/,	// cssファイルをjsModuleにbundleする
+				use: ['css-loader']
+			}
+		]
+	},
+
 	devServer: {
 		contentBase: outputPath	// webpack-dev-serverで開くパスを指定
 	}
