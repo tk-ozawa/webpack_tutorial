@@ -1,5 +1,5 @@
 const path = require('path')	// 絶対パス補完
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebPackPlugin = require('html-webpack-plugin')
 
 const outputPath = path.resolve(__dirname, 'dist')
 
@@ -53,9 +53,9 @@ module.exports = {
 	},
 
 	plugins: [
-		new HtmlWebpackPlugin({
-			template: './src/index.html',	// 雛形ファイル
-			filename: './index.html'	// dist内に出力
-		})
+		new HtmlWebPackPlugin({
+			template: './src/index.html',
+			filename: './index.html',
+		}),
 	]
 }
