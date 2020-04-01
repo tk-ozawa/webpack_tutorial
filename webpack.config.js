@@ -13,6 +13,11 @@ module.exports = {
 	module: {
 		rules: [
 			{
+				test: /\.jsx?$/,	// reactの為にjsだけでなくjsxも対象とする
+				exclude: /node_modules/,	// transpile対象外
+				loader: "babel-loader"
+			},
+			{
 				test: /\.css$/,	// cssファイルをjsModuleにbundleする
 				use: [	// loader は下から読み込まれる。順番に注意
 					'style-loader',
