@@ -2,8 +2,6 @@ const path = require('path')	// 絶対パス補完
 
 const outputPath = path.resolve(__dirname, 'dist')
 
-console.log({ outputPath })
-
 module.exports = {
 	entry: './src/index.js',	// bundle対象の設定
 
@@ -19,6 +17,14 @@ module.exports = {
 				use: [	// loader は下から読み込まれる。順番に注意
 					'style-loader',
 					'css-loader'
+				]
+			},
+			{
+				test: /\.scss$/,
+				use: [
+					'style-loader',
+					'css-loader',
+					'sass-loader'
 				]
 			},
 			{
