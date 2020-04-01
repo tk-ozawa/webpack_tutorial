@@ -5,6 +5,7 @@ import Animal from './utilities'
 console.log(Animal.say())
 
 import './css/style.css'
+import './css/style.scss'
 
 function component() {
 	const element = document.createElement('div')
