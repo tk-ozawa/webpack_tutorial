@@ -6,8 +6,6 @@ console.log(Animal.say())
 
 import './css/style.css'
 
-console.log(style.toString())
-
 function component() {
 	const element = document.createElement('div')
 	const array = ['Hello', 'webpack', '!!']
