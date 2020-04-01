@@ -20,6 +20,14 @@ module.exports = {
 					'style-loader',
 					'css-loader'
 				]
+			},
+			{
+				test: /\.(jpe?g|png|gif|svg|ico)$/i,
+				loader: 'url-loader',
+				options: {
+					limit: 2048,	// 2KBを超える画像を分離
+					name: './images/[name].[ext]'
+				}
 			}
 		]
 	},
