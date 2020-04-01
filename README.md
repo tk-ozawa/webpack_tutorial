@@ -6,7 +6,7 @@
 
 1. `git clone git@github.com:tk-ozawa/webpack_tutorial.git`
 1. `cd webpack_tutorial`
-1. `npm run serve`
+1. `npm run start`
 
 ## 導入したプラグイン
 
