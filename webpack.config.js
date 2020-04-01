@@ -1,4 +1,5 @@
 const path = require('path')	// 絶対パス補完
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const outputPath = path.resolve(__dirname, 'dist')
 
@@ -39,11 +40,22 @@ module.exports = {
 					limit: 2048,	// 2KBを超える画像を分離
 					name: './images/[name].[ext]'
 				}
+			},
+			{
+				test: /\.html$/,
+				loader: 'html-loader'
 			}
 		]
 	},
 
 	devServer: {
 		contentBase: outputPath	// webpack-dev-serverで開くパスを指定
-	}
+	},
+
+	plugins: [
+		new HtmlWebpackPlugin({
+			template: './src/index.html',	// 雛形ファイル
+			filename: './index.html'	// dist内に出力
+		})
+	]
 }
